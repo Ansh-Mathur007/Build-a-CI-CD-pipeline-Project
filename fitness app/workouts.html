@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Fitness App - Workouts</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+	<h1>Your Workout</h1>
+	{% if workout %}
+		<p>You did {{workout}} today. Great job!</p>
+	{% else %}
+		<p>You haven't entered your workout yet.</p>
+	{% endif %}
+</body>
+</html>
